@@ -1,0 +1,141 @@
+{
+  "id": "UzZtKhnaYQyNkAhftIAuY",
+  "name": "New Workflow",
+  "workflowName": "New Workflow",
+  "itemType": "workflow",
+  "appId": "OlyCczOFIVTBvdDyegtUy",
+  "folderId": "hTxdAwOagmAEaWgQJJqSN",
+  "type": "ORCHESTRATION",
+  "version": "0.0.1",
+  "steps": [
+    {
+      "id": "QHLXwOCvZmeRPqpspLION",
+      "stepName": "Select Trigger",
+      "stepType": "EVENT_SOURCE",
+      "icon": "SelectTriggerIcon",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityType": "EVENT_SOURCE",
+        "activityName": "Start",
+        "activityGroup": "Common",
+        "name": "Select Trigger",
+        "config.name": "Select Trigger"
+      }
+    },
+    {
+      "id": "aTJkYaoLDuncOBhmkUjXI",
+      "stepName": "End",
+      "stepType": "END",
+      "icon": "<svg width=\"36\" height=\"36\" viewBox=\"0 0 36 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path opacity=\"0.2\" d=\"M18.002 4.5C15.3319 4.5 12.7218 5.29176 10.5018 6.77516C8.2817 8.25856 6.55137 10.367 5.52959 12.8338C4.5078 15.3006 4.24046 18.015 4.76136 20.6337C5.28226 23.2525 6.56801 25.6579 8.45602 27.5459C10.344 29.434 12.7495 30.7197 15.3682 31.2406C17.987 31.7615 20.7014 31.4942 23.1682 30.4724C25.635 29.4506 27.7434 27.7203 29.2268 25.5002C30.7102 23.2801 31.502 20.67 31.502 18C31.502 16.2272 31.1528 14.4717 30.4743 12.8338C29.7959 11.1959 28.8015 9.70765 27.5479 8.45405C26.2943 7.20046 24.8061 6.20606 23.1682 5.52762C21.5303 4.84918 19.7748 4.5 18.002 4.5V4.5ZM21.377 21.375H14.627V14.625H21.377V21.375Z\" fill=\"#F25757\"/>\n <path d=\"M18.002 31.5C25.4578 31.5 31.502 25.4558 31.502 18C31.502 10.5442 25.4578 4.5 18.002 4.5C10.5461 4.5 4.50195 10.5442 4.50195 18C4.50195 25.4558 10.5461 31.5 18.002 31.5Z\" stroke=\"#F25757\" stroke-miterlimit=\"10\"/>\n<path d=\"M21.373 14.625H14.623V21.375H21.373V14.625Z\" stroke=\"#F25757\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityType": "END",
+        "activityName": "End",
+        "activityGroup": "Common",
+        "name": "End",
+        "config.name": "End"
+      }
+    },
+    {
+      "id": "EDZCzukGqcwNErovLpVUt",
+      "stepName": "LookupUpsert",
+      "stepType": "SIMPLE",
+      "icon": "<svg width=\"36\" height=\"36\" viewBox=\"0 0 36 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"4\" y=\"6\" width=\"28\" height=\"24\" rx=\"2\" fill=\"#E4E7FB\"/><path d=\"M14.714 16H10m5.5 4H10m11-8H10m16 12-1.8-1.8m1.2-3a4.2 4.2 0 1 1-8.4 0 4.2 4.2 0 0 1 8.4 0\" stroke=\"#5C41FF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M4 9v18.5c0 1 0 2.5 2.5 2.5H30c2 0 2 0 2-2V9c0-1.873-.5-3-3-3H8C7 6 4 6 4 9Z\" stroke=\"#5C41FF\"/><path d=\"M17.5 26a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0\" fill=\"#5C41FF\" stroke=\"#fff\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path fill=\"#5C41FF\" d=\"M5.2 21.2h9.6v9.6H5.2z\"/><path d=\"M9.76 29.12v-6.24Z\" fill=\"#fff\"/><path d=\"m6.88 25.952 1.44-1.536 1.44-1.536m0 0 2.88 3.072M9.76 22.88v6.24\" stroke=\"#fff\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "indicator": "",
+      "description": "",
+      "deletable": true,
+      "config": {
+        "activityType": "SIMPLE",
+        "activityGroup": "Common",
+        "activityName": "LookupUpsert",
+        "name": "LookupUpsert",
+        "config.name": "LookupUpsert"
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "id": "HwwbzcygDXQifIqvXYAfV",
+      "from": "QHLXwOCvZmeRPqpspLION",
+      "to": "EDZCzukGqcwNErovLpVUt",
+      "handleMap": {
+        "source": "QHLXwOCvZmeRPqpspLION_1",
+        "target": "EDZCzukGqcwNErovLpVUt_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    },
+    {
+      "id": "sBUgSkEOmGZFgcODmlZtA",
+      "from": "EDZCzukGqcwNErovLpVUt",
+      "to": "aTJkYaoLDuncOBhmkUjXI",
+      "handleMap": {
+        "source": "EDZCzukGqcwNErovLpVUt_2",
+        "target": "aTJkYaoLDuncOBhmkUjXI_1"
+      },
+      "name": "",
+      "description": "",
+      "type": "DEFAULT",
+      "lineType": "step",
+      "lineColor": "#8c8c8c"
+    }
+  ],
+  "diagram": {
+    "QHLXwOCvZmeRPqpspLION": {
+      "x": 16,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "right",
+          "id": "QHLXwOCvZmeRPqpspLION_1"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": null
+    },
+    "aTJkYaoLDuncOBhmkUjXI": {
+      "x": 512,
+      "y": 48,
+      "handles": [
+        {
+          "type": "source",
+          "position": "left",
+          "id": "aTJkYaoLDuncOBhmkUjXI_1"
+        }
+      ],
+      "sourcePosition": null,
+      "targetPosition": "left"
+    },
+    "EDZCzukGqcwNErovLpVUt": {
+      "x": 240,
+      "y": 48,
+      "handles": [
+        {
+          "type": "target",
+          "position": "left",
+          "id": "EDZCzukGqcwNErovLpVUt_1"
+        },
+        {
+          "type": "source",
+          "position": "right",
+          "id": "EDZCzukGqcwNErovLpVUt_2"
+        }
+      ],
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    }
+  },
+  "mappings": {},
+  "notes": [],
+  "config": {
+    "name": "New Workflow"
+  }
+}
